@@ -23,7 +23,7 @@ public class Treatment {
 	private String name;
 	
 
-	@Relationship(type = "ACTED_IN")
+	@Relationship(type = "Treatedby")
 	private List<Disease> movies = new ArrayList<>();
 
 	public Treatment() {

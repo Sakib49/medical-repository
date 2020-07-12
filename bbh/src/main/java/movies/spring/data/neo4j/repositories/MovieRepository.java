@@ -21,6 +21,6 @@ public interface MovieRepository extends Neo4jRepository<Disease, Long> {
 
 	Collection<Disease> findByTitleLike(@Param("title") String title);
 
-    @Query("MATCH (m:Disease)<-[r:ACTED_IN]-(a:Treatment) RETURN m,r,a LIMIT {limit}")
+    @Query("MATCH (m:Disease)<-[r:Treatedby]-(a:Treatment) RETURN m,r,a LIMIT {limit}")
 	Collection<Disease> graph(@Param("limit") int limit);
 }

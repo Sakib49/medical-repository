@@ -91,8 +91,8 @@
                         movie.roles.forEach(function (cast) {
                             $.get(cast._links.person.href, function(personData) {
                                 var person = personData.name;
-                                var job = cast.job || "acted";
-                                $list.append($("<li>" + person + " " +job + (job == "acted"?" as " + cast.roles.join(", ") : "") + "</li>"));
+                                var job = cast.job || "Treated";
+                                $list.append($("<li>" + person + " " +job + (job == "Treated"?" by " + cast.roles.join(", ") : "") + "</li>"));
                             });
                         });
                     }, "json");

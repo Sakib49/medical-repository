@@ -23,13 +23,13 @@ public class Disease {
 	
 
 	@JsonIgnoreProperties("movie")
-	@Relationship(type = "ACTED_IN", direction = Relationship.INCOMING)
+	@Relationship(type = "Treatedby", direction = Relationship.INCOMING)
 	private List<Role> roles;
 
 	public Disease() {
 	}
 
-	public Disease(String title, int released, String tagline) {
+	public Disease(String title) {
 		this.title = title;
 		
 	}

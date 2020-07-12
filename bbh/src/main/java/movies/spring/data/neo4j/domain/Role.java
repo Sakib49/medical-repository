@@ -10,7 +10,7 @@ import org.neo4j.ogm.annotation.*;
 /**
  * @author Mark Angrish
  */
-@RelationshipEntity(type = "ACTED_IN")
+@RelationshipEntity(type = "Treatedby")
 public class Role {
 
     @Id
@@ -23,6 +23,8 @@ public class Role {
 
 	@EndNode
 	private Disease movie;
+	
+	
 
 	public Role() {
 	}
