@@ -1,6 +1,7 @@
 package movies.spring.data.neo4j.domain;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -19,10 +20,12 @@ public class Role {
 	private List<String> roles = new ArrayList<>();
 
 	@StartNode
-	private Treatment person;
+	 private Treatment person;;
 
 	@EndNode
 	private Disease movie;
+	
+	
 	
 	
 
